@@ -1,0 +1,41 @@
+<?php
+
+namespace DummyNamespace;
+
+class DummyClass extends ArrayPartition
+{
+    /**
+     * TopPlugins constructor.
+     *
+     * @param string|null $component
+     */
+    public function __construct( ?string $component = null ) {
+        parent::__construct( $component );
+
+        // Change this from Model to your model
+        $this->model(Model::class);
+
+        // Set a db column
+        $this->column('');
+    }
+
+    /**
+     * Determine for how many minutes the metric should be cached.
+     *
+     * @return  \DateTimeInterface|\DateInterval|float|int
+     */
+    public function cacheFor()
+    {
+        // return now()->addMinutes(5);
+    }
+
+    /**
+     * Get the URI key for the metric.
+     *
+     * @return string
+     */
+    public function uriKey()
+    {
+        return 'uri-key';
+    }
+}

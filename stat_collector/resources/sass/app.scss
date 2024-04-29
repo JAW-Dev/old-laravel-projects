@@ -1,0 +1,23 @@
+.ct-chart {
+    display: none;
+}
+
+.card-panel {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    min-height: 242px;
+}
+
+.max-h-90px {
+    max-height: none;
+}
+
+.card.metric .items-center {
+    flex-grow: 1;
+}
+
+
+.card .list-reset li:nth-of-type(1n+11) {
+    display: none;
+}
